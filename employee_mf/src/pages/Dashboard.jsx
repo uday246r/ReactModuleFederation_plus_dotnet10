@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
 import EmployeeTable from "../components/EmployeeTable";
 import EmployeeModal from "../components/EmployeeModal";
 import {
@@ -57,12 +56,11 @@ function Dashboard() {
 
   return (
     <div className="dashboard-page">
-      <Navbar />
       <div className="dashboard-content">
         <div className="dashboard-top">
           <div>
             <h1>Team Directory</h1>
-            <p>Manage your team members and their details</p>
+            <p>Manage your team members, departments, and compensation</p>
           </div>
           <button className="create-btn" onClick={handleCreate}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -71,6 +69,33 @@ function Dashboard() {
             </svg>
             Add Member
           </button>
+        </div>
+
+        <div className="metrics-overview">
+          <div className="metric-card">
+            <div className="metric-icon">👥</div>
+            <div className="metric-data">
+              <h3>Total Members</h3>
+              <h2>{employees.length}</h2>
+              <span className="trend positive">Active Team</span>
+            </div>
+          </div>
+          <div className="metric-card">
+            <div className="metric-icon">🏢</div>
+            <div className="metric-data">
+              <h3>Departments</h3>
+              <h2>{new Set(employees.map(e => e.department)).size}</h2>
+              <span className="trend neutral">Across Enterprise</span>
+            </div>
+          </div>
+          <div className="metric-card">
+            <div className="metric-icon">💰</div>
+            <div className="metric-data">
+              <h3>Average Salary</h3>
+              <h2>₹ {employees.length ? Math.round(employees.reduce((acc, curr) => acc + Number(curr.salary), 0) / employees.length).toLocaleString() : 0}</h2>
+              <span className="trend neutral">Current Fiscal Year</span>
+            </div>
+          </div>
         </div>
 
         {employees && employees.length > 0 ? (
@@ -88,7 +113,7 @@ function Dashboard() {
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
             <h3>No employees found</h3>
-            <p>Get started by adding a new team member.</p>
+            <p>Get started by adding a new team member to your directory.</p>
           </div>
         )}
       </div>

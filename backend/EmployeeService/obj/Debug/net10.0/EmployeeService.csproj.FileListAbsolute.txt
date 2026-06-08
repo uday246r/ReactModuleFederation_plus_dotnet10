@@ -128,3 +128,4 @@ C:\Users\udayo\OneDrive\Desktop\EmployeeManagement\backend\EmployeeService\obj\D
 C:\Users\udayo\OneDrive\Desktop\EmployeeManagement\backend\EmployeeService\obj\Debug\net10.0\EmployeeService.pdb
 C:\Users\udayo\OneDrive\Desktop\EmployeeManagement\backend\EmployeeService\obj\Debug\net10.0\EmployeeService.genruntimeconfig.cache
 C:\Users\udayo\OneDrive\Desktop\EmployeeManagement\backend\EmployeeService\obj\Debug\net10.0\ref\EmployeeService.dll
+C:\Users\udayo\OneDrive\Desktop\EmployeeManagement\backend\EmployeeService\obj\Debug\net10.0\EmployeeService.sourcelink.json

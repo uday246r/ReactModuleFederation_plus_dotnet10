@@ -1,10 +1,36 @@
 import { defineConfig } from "vite";
-
 import react from "@vitejs/plugin-react";
-
 import federation from "@originjs/vite-plugin-federation";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+/** Workaround: https://github.com/originjs/vite-plugin-federation/issues/740 */
+function fixFederationCssForVite8() {
+  return {
+    name: "fix-federation-css-vite8",
+    apply: "build",
+    closeBundle() {
+      const assetsDir = path.resolve(__dirname, "dist", "assets");
+      const remoteEntry = path.join(assetsDir, "remoteEntry.js");
+      if (!fs.existsSync(remoteEntry)) return;
+
+      const cssFiles = fs
+        .readdirSync(assetsDir)
+        .filter((file) => file.endsWith(".css"));
+
+      let code = fs.readFileSync(remoteEntry, "utf8");
+      code = code.replace(/`__v__css__[^`]*`/g, JSON.stringify(cssFiles));
+      fs.writeFileSync(remoteEntry, code);
+    },
+  };
+}
 
 export default defineConfig({
+
+  base: "http://localhost:5001/",
 
   plugins: [
 
@@ -20,11 +46,40 @@ export default defineConfig({
         "./EmployeeApp": "./src/App.jsx",
       },
 
-      shared: ["react", "react-dom"],
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: false,
+        },
+
+        "react-dom": {
+          singleton: true,
+          requiredVersion: false,
+        },
+      },
     }),
+
+    fixFederationCssForVite8(),
   ],
+
+  build: {
+    target: "esnext",
+    cssCodeSplit: false,
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name].[ext]",
+      },
+    },
+  },
 
   server: {
     port: 5001,
+    cors: true,
+  },
+
+  preview: {
+    port: 5001,
+    strictPort: true,
+    cors: true,
   },
 });
