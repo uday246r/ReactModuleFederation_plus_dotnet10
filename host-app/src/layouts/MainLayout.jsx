@@ -7,7 +7,7 @@ function MainLayout({ children }) {
   return (
     <div className="layout-container">
 
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       <div className="main-content">
         <Navbar />

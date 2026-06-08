@@ -13,7 +13,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      <header className="dashboard-hero">
+      {/* <header className="dashboard-hero">
         <div className="hero-content">
           <h1>Welcome back, Admin 👋</h1>
           <p>Here is an overview of your enterprise systems today.</p>
@@ -21,8 +21,8 @@ function Dashboard() {
         <div className="hero-date">
           <span>{new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}</span>
         </div>
-      </header>
-
+      </header> */}
+{/* 
       <div className="metrics-overview">
         <div className="metric-card">
           <div className="metric-icon">👥</div>
@@ -48,7 +48,7 @@ function Dashboard() {
             <span className="trend neutral">Stable</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="modules-section">
         <div className="section-title">

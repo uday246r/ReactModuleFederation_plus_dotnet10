@@ -17,6 +17,10 @@ const EmployeeApp = lazy(() =>
   import("employee_mf/EmployeeApp")
 );
 
+const AssetApp = lazy(() =>
+  import("asset_management/AssetApp")
+);
+
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -59,7 +63,7 @@ function AppRoutes() {
               </MainLayout>
             </ProtectedRoute>
           }
-        />
+        /> */}
 
         <Route
           path="/assets/*"
@@ -74,7 +78,7 @@ function AppRoutes() {
           }
         />
 
-        <Route
+        {/* <Route
           path="/helpdesk/*"
           element={
             <ProtectedRoute>
