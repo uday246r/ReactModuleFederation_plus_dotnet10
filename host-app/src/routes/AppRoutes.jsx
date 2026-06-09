@@ -52,7 +52,7 @@ function AppRoutes() {
           }
         />
 
-        {/* <Route
+        <Route
           path="/inventory/*"
           element={
             <ProtectedRoute>
@@ -63,9 +63,9 @@ function AppRoutes() {
               </MainLayout>
             </ProtectedRoute>
           }
-        /> */}
+        />
 
-        <Route
+        {/* <Route
           path="/assets/*"
           element={
             <ProtectedRoute>
@@ -76,7 +76,7 @@ function AppRoutes() {
               </MainLayout>
             </ProtectedRoute>
           }
-        />
+        /> */}
 
         {/* <Route
           path="/helpdesk/*"
