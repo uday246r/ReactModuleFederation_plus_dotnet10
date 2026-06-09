@@ -25,9 +25,9 @@ const HelpdeskApp = lazy(() =>
   import("helpdesk/HelpdeskApp")
 );
 
-const InventoryRoutes = lazy(() =>
+const InventoryApp = lazy(() =>
   import("inventory/Routes")
-);
+); 
 
 function AppRoutes() {
   return (
