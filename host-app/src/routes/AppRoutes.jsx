@@ -25,7 +25,7 @@ const HelpdeskApp = lazy(() =>
   import("helpdesk/HelpdeskApp")
 );
 
-const HelpdeskApp = lazy(() =>
+const InventoryApp = lazy(() =>
   import("inventory/ExampleComponent")
 );
 
