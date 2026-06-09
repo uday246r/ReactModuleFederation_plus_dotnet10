@@ -25,6 +25,10 @@ const HelpdeskApp = lazy(() =>
   import("helpdesk/HelpdeskApp")
 );
 
+const HelpdeskApp = lazy(() =>
+  import("inventory/ExampleComponent")
+);
+
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -56,7 +60,7 @@ function AppRoutes() {
           }
         />
 
-        {/* <Route
+        <Route
           path="/inventory/*"
           element={
             <ProtectedRoute>
@@ -67,7 +71,7 @@ function AppRoutes() {
               </MainLayout>
             </ProtectedRoute>
           }
-        /> */}
+        />
 
         <Route
           path="/assets/*"

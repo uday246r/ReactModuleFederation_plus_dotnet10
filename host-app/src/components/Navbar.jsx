@@ -2,21 +2,21 @@ import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-  const location = useLocation();
+  // const location = useLocation();
 
-  const getPageTitle = () => {
-    if (location.pathname.startsWith("/employees")) return "Employee Management";
-    if (location.pathname.startsWith("/inventory")) return "Inventory Management";
-    if (location.pathname.startsWith("/assets")) return "Asset Management";
-    if (location.pathname.startsWith("/helpdesk")) return "Helpdesk Management";
-    return "Dashboard";
-  };
+  // const getPageTitle = () => {
+  //   if (location.pathname.startsWith("/employees")) return "Employee Management";
+  //   if (location.pathname.startsWith("/inventory")) return "Inventory Management";
+  //   if (location.pathname.startsWith("/assets")) return "Asset Management";
+  //   if (location.pathname.startsWith("/helpdesk")) return "Helpdesk Management";
+  //   return "Dashboard";
+  // };
 
   return (
     <header className="top-navbar">
-      <div className="navbar-left">
+      {/* <div className="navbar-left">
         <h2>{getPageTitle()}</h2>
-      </div>
+      </div> */}
 
       <div className="navbar-right">
         <div className="search-bar">
