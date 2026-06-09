@@ -38,10 +38,10 @@ export default defineConfig({
           singleton: true,
           requiredVersion: false,
         },
-        "react-dom": {
-          singleton: true,
-          requiredVersion: false,
-        },
+        "react-router-dom": {
+  singleton: true,
+  requiredVersion: false,
+}
       },
     }),
   ],
