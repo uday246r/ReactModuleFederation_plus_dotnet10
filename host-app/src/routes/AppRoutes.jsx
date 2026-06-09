@@ -78,7 +78,7 @@ function AppRoutes() {
           }
         />
 
-        {/* <Route
+        <Route
           path="/helpdesk/*"
           element={
             <ProtectedRoute>
@@ -89,7 +89,7 @@ function AppRoutes() {
               </MainLayout>
             </ProtectedRoute>
           }
-        /> */}
+        />
 
       </Routes>
     </BrowserRouter>
