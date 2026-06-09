@@ -14,9 +14,9 @@ export default defineConfig({
 
       remotes: {
         employee_mf:
-          "http://localhost:5001/assets/remoteEntry.js",
+          "https://employeesfederation.onrender.com/assets/remoteEntry.js",
         asset_management:
-      "https://assetmanagementsystem-0sqh.onrender.com/assets/remoteEntry.js",
+          "https://assetmanagementsystem-0sqh.onrender.com/assets/remoteEntry.js",
 
       },
 
