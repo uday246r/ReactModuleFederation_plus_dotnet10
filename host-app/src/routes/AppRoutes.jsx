@@ -26,7 +26,7 @@ const HelpdeskApp = lazy(() =>
 );
 
 const ExampleComponent = lazy(() =>
-  import("inventory/ExampleComponent")
+  import("inventory/App")
 );
 
 function AppRoutes() {
@@ -66,7 +66,7 @@ function AppRoutes() {
             <ProtectedRoute>
               <MainLayout>
                 <Suspense fallback={<h2>Loading...</h2>}>
-                  <ExampleComponent />
+                  <App />
                 </Suspense>
               </MainLayout>
             </ProtectedRoute>
