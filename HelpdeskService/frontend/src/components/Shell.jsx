@@ -57,7 +57,7 @@ export const Shell = ({ children }) => {
 
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '8px', flex: 1 }}>
           <NavLink
-            to=""
+            to="/helpdesk"
             className="btn"
             style={{
               justifyContent: 'flex-start',
@@ -69,7 +69,7 @@ export const Shell = ({ children }) => {
             <LayoutDashboard size={18} /> Command Center
           </NavLink>
           <NavLink
-            to="tickets"
+            to="/helpdesk/tickets"
             className="btn"
             style={{
               justifyContent: 'flex-start',
@@ -81,7 +81,7 @@ export const Shell = ({ children }) => {
             <ListTodo size={18} /> Support Tickets
           </NavLink>
           <NavLink
-            to="create"
+            to="/helpdesk/create"
             className="btn"
             style={{
               justifyContent: 'flex-start',
