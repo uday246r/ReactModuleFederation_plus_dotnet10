@@ -43,11 +43,6 @@ function MainLayout({ children }) {
       />
 
       <div className="main-content">
-        <Navbar 
-          toggleMobileSidebar={toggleMobileSidebar} 
-          sidebarCollapsed={sidebarCollapsed}
-          toggleSidebar={toggleSidebar}
-        />
         <main className="page-container">
           {children}
         </main>

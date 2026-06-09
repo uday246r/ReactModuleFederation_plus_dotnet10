@@ -92,7 +92,7 @@ body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
+  min-height: 100%;
   overflow-x: hidden;
 }
 
@@ -115,7 +115,7 @@ body {
 /* Layout Utilities */
 .app-container {
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .sidebar {

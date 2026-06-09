@@ -10,18 +10,23 @@ import Dashboard from
 import Products from
 "../pages/Products";
 
+import MainLayout from
+"../layouts/MainLayout";
+
 function AppRoutes() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={<Dashboard />}
-      />
-      <Route
-        path="/products"
-        element={<Products />}
-      />
-    </Routes>
+    <MainLayout>
+      <Routes>
+        <Route
+          index
+          element={<Dashboard />}
+        />
+        <Route
+          path="products"
+          element={<Products />}
+        />
+      </Routes>
+    </MainLayout>
   );
 }
 

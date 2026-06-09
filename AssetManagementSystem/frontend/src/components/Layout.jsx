@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 
 const links = [
-  { to: "/", label: "Dashboard" },
-  { to: "/assets", label: "Assets" },
-  { to: "/employees", label: "Employees" },
-  { to: "/assignments", label: "Assignments" }
+  { to: "", label: "Dashboard" },
+  { to: "assets", label: "Assets" },
+  { to: "employees", label: "Employees" },
+  { to: "assignments", label: "Assignments" }
 ];
 
 export default function Layout({ children }) {
