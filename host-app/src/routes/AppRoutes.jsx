@@ -21,6 +21,10 @@ const AssetApp = lazy(() =>
   import("asset_management/AssetApp")
 );
 
+const HelpdeskApp = lazy(() =>
+  import("helpdesk/HelpdeskApp")
+);
+
 function AppRoutes() {
   return (
     <BrowserRouter>
