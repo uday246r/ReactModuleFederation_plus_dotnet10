@@ -19,8 +19,8 @@ export default defineConfig({
           "https://assetmanagementsystem-0sqh.onrender.com/assets/remoteEntry.js",
         helpdesk:
           "https://helpdesk-frontend-45xw.onrender.com/assets/remoteEntry.js",
-        // inventory:
-        //   "https://inventorymanagement-rm.onrender.com/assets/remoteEntry.js"
+        inventory:
+          "https://inventorymanagement-rm.onrender.com/assets/remoteEntry.js"
 
       },
 

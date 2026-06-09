@@ -25,9 +25,9 @@ const HelpdeskApp = lazy(() =>
   import("helpdesk/HelpdeskApp")
 );
 
-// const Routes = lazy(() =>
-//   import("inventory/Routes")
-// );
+const InventoryRoutes = lazy(() =>
+  import("inventory/Routes")
+);
 
 function AppRoutes() {
   return (
@@ -60,18 +60,18 @@ function AppRoutes() {
           }
         />
 
-        {/* <Route
+        <Route
           path="/inventory/*"
           element={
             <ProtectedRoute>
               <MainLayout>
                 <Suspense fallback={<h2>Loading...</h2>}>
-                  <Routes />
+                  <InventoryApp />
                 </Suspense>
               </MainLayout>
             </ProtectedRoute>
           }
-        /> */}
+        />
 
         <Route
           path="/assets/*"
