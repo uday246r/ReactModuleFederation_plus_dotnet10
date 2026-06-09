@@ -30,7 +30,7 @@ function fixFederationCssForVite8() {
 
 export default defineConfig({
 
-  base: "http://localhost:5001/",
+  base: "/",
 
   plugins: [
 
