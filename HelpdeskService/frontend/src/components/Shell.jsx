@@ -26,6 +26,8 @@ export const Shell = ({ children }) => {
       .catch(() => setTokenStatus('failed'));
   }, [user]);
 
+  const basePath = location.pathname.startsWith('/helpdesk') ? '/helpdesk' : '';
+
   const isDashboardActive = location.pathname === '/' || location.pathname === '/helpdesk' || location.pathname === '/helpdesk/';
   const isTicketsActive = location.pathname.endsWith('/tickets') || location.pathname.includes('/ticket/') || location.pathname.includes('/update/');
   const isCreateActive = location.pathname.endsWith('/create');
@@ -57,7 +59,7 @@ export const Shell = ({ children }) => {
 
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '8px', flex: 1 }}>
           <NavLink
-            to="/helpdesk"
+            to={basePath || "/"}
             className="btn"
             style={{
               justifyContent: 'flex-start',
@@ -69,7 +71,7 @@ export const Shell = ({ children }) => {
             <LayoutDashboard size={18} /> Command Center
           </NavLink>
           <NavLink
-            to="/helpdesk/tickets"
+            to={`${basePath}/tickets`}
             className="btn"
             style={{
               justifyContent: 'flex-start',
@@ -81,7 +83,7 @@ export const Shell = ({ children }) => {
             <ListTodo size={18} /> Support Tickets
           </NavLink>
           <NavLink
-            to="/helpdesk/create"
+            to={`${basePath}/create`}
             className="btn"
             style={{
               justifyContent: 'flex-start',
